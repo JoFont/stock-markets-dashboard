@@ -1,13 +1,16 @@
 import React from 'react';
-import 'fomantic-ui-css/semantic.css';
+import 'semantic-ui-less/semantic.less'
 import SearchBar from './components/SearchBar';
+import { Container } from 'semantic-ui-react';
 
 
 
 function App() {
   return (
     <div>
-      <SearchBar />
+      <Container>
+        <SearchBar />
+      </Container>
     </div>
   );
 }

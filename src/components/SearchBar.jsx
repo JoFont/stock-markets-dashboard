@@ -45,14 +45,15 @@ function SearchBar(props) {
   return (
     <div>
       <Search
-          loading={searchResults.isLoading}
-          onResultSelect={handleResultSelect}
-          onSearchChange={_.debounce(handleSearchChange, 500, {
-            leading: true,
-          })}
-          results={searchResults.results}
-          value={inputValue}
-          {...props}
+        fluid
+        loading={searchResults.isLoading}
+        onResultSelect={handleResultSelect}
+        onSearchChange={_.debounce(handleSearchChange, 500, {
+          leading: true,
+        })}
+        results={searchResults.results}
+        value={inputValue}
+        {...props}
         />
     </div>
   )
