@@ -3,19 +3,15 @@
 *******************************/
 
 
-& {
-  .ui.search {
-    .prompt {
-      background-color: #262631;
-      border-radius: 0;
-      padding: 1rem;
-    }
-  }
+.ui.search {
 
-  .ui.search.focus {
-    .prompt {
-      background-color: #40424f;
-      color: white;
-    }
+  margin-top: 2rem;
+
+  .input {
+    width: 100%;
+  }
+  .prompt {
+    border-radius: 5px;
+    padding: 1rem;
   }
 }
