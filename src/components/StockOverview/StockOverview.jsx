@@ -1,7 +1,9 @@
 import React, { useGlobal, useEffect, useState } from 'reactn';
-import { Grid, Container } from 'semantic-ui-react'
-import StockChart from './StockChart'
+import { Grid, Container } from 'semantic-ui-react';
+import StockChart from './StockChart';
 import { fetchDataOverview } from '../../services/iexAPI';
+
+import "./StockOverview.scss";
 
 const StockOverview = () => {
   const [activeSymbol] = useGlobal("symbol");
@@ -40,8 +42,10 @@ const StockOverview = () => {
       <Container fluid className="raised padded segment">
         <Grid>
           <Grid.Row>
-            <Grid.Column>
+            <Grid.Column width={6}>
               <h1>{data.quote.latestPrice || 0}</h1>
+            </Grid.Column>
+            <Grid.Column width={6} className="text-center">
               {getCarrets("h3", data.quote.changePercent)}
             </Grid.Column>
           </Grid.Row>
