@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useGlobal, setGlobal } from 'reactn'
 import _ from 'lodash';
 import { searchMarkets } from "../services/iexAPI";
-import { Search } from 'semantic-ui-react'
-
+import { Search } from 'semantic-ui-react';
 
 
 const initSearchResults = { isLoading: false, results: [] };
@@ -13,7 +12,7 @@ function SearchBar(props) {
   const [inputValue, setInputValue] = useState("");
 
   const handleResultSelect = (e, { result }) => {
-    // this.setResults({ value: result.title })
+    setGlobal({symbol: result.title})
   }
 
   const handleSearchChange = (e, { value }) => {

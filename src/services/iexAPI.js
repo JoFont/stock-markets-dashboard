@@ -9,3 +9,7 @@ export const searchMarkets = async (query) => {
   });
   return response.data;
 }
+
+export const fetchChart = async (symbol) => {
+  
+}
