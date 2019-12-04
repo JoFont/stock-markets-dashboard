@@ -3,7 +3,7 @@ import 'semantic-ui-less/semantic.less'
 import SearchBar from './components/SearchBar';
 import { Container, Grid } from 'semantic-ui-react';
 import Menu from './components/Menu';
-import StockChart from './components/StockChart';
+import StockOverview from './components/StockOverview/StockOverview';
 import Calendar from './components/Calendar';
 
 
@@ -17,10 +17,10 @@ function App() {
         <Grid>
           <Grid.Row>
             <Grid.Column width={8}>
-              <StockChart />
+              <StockOverview />
             </Grid.Column>
             <Grid.Column width={8}>
-              <Calendar/>
+              <Calendar />
             </Grid.Column>
           </Grid.Row>
         </Grid>
